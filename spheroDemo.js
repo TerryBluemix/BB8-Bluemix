@@ -55,20 +55,13 @@ bb8.connect(function() {
 
 			else if (msg.d.action === '#spherorun') {
 				console.log('Get Sphero to run');
-        bb8.roll(150, 0);
-        setTimeout(function(){
-          bb8.stop();
-        }, 3000); //Stop after 1.5 seconds
+			        bb8.roll(150, 0);
+			        setTimeout(function(){
+			          bb8.stop();
+			        }, 3000); //Stop after 3 seconds
+			
+			        bb8.color("green");
 
-        bb8.color("green");
-
-        // setInterval(function() {
-        //    var newRed = Math.floor(Math.random() * 256);
-        //    var newBlue = Math.floor(Math.random() * 256);
-        //    var newGreen = Math.floor(Math.random() * 256);
-        //    //console.log("R: " + newRed + " G: " + newGreen + " B: " + newBlue);
-        //    bb8.color({ red: newRed, green: newGreen, blue: newBlue });
-        //  }, 1000); //change color every second
 			}
 
 			else if (msg.d.action === '#spherorunback') {
@@ -76,7 +69,7 @@ bb8.connect(function() {
        			bb8.roll(150, 180);
         		setTimeout(function(){
           			bb8.stop();
-        		}, 3000); //Stop after 1.5 seconds
+        		}, 3000); //Stop after 3 seconds
         		bb8.color("green");
 
 			}
